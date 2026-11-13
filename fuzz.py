@@ -66,7 +66,6 @@ def random_secret_dict():
     return {"password": ([random_value()], [random_value()], [random_value()])}
 
 
-# (name, function, function that makes the arguments)
 TESTS = [
     ("parser.keyMiner", parser.keyMiner,
      lambda: (random_or_deep(), random_value())),
