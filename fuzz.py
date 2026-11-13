@@ -10,6 +10,13 @@ ITERATIONS = 2000
 random.seed(5710)
 
 
+def short_text(value):
+    try:
+        return str(value)[:150]
+    except RecursionError:
+        return "(very deeply nested data)"
+
+
 def random_value():
     values = [None, True, False, 0, 1, -1, 1.5, "", "a", "kind", "spec",
               "password", "user", "default", "http://x", "A" * 3000]
@@ -104,7 +111,7 @@ for name, function, make_args in TESTS:
             location = os.path.basename(last_call.filename) + ":" + str(last_call.lineno)
             bug_id = type(error).__name__ + " at " + location
             if bug_id not in bugs:
-                bugs[bug_id] = (str(error)[:100], str(args)[:150])
+                bugs[bug_id] = (str(error)[:100], short_text(args))
     print(name, "->", len(bugs), "bug(s)")
     report.append("| " + name + " | " + str(len(bugs)) + " |")
     for bug_id, (message, example) in bugs.items():
