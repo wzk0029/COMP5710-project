@@ -1,0 +1,48 @@
+name: SQA CI
+
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
+  workflow_dispatch:
+
+jobs:
+  sqa:
+    runs-on: ubuntu-latest
+
+    steps:
+      - name: Check out repository
+        uses: actions/checkout@v4
+
+      - name: Set up Python 3.11
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install ruamel.yaml pandas numpy sarif-om jschema-to-python typer flake8
+
+      - name: Lint
+        run: flake8 . --select=E9,F63,F7,F82 --show-source --statistics
+        continue-on-error: true
+
+      - name: Run existing unit tests
+        run: python -m unittest TEST_PARSING
+
+      - name: Run fuzz.py
+        run: python fuzz.py
+
+      - name: Upload fuzzing and forensics reports
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: sqa-reports
+          path: |
+            fuzz_report.md
+            fuzz_report.json
+            forensics.log
+            forensics_logs/
+          if-no-files-found: ignore
