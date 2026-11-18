@@ -5,4 +5,4 @@
 | Name | Email ID | Banner ID |
 |------|----------|-----------|
 | Woosol Kim | wzk0029@auburn.edu | 904367055 |
-| Sam Germanson | @@@ | @@@ |
+| Sam Germanson | stg0025@auburn.edu | 904298101 |
