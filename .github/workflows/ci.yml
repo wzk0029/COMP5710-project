@@ -10,6 +10,10 @@ on:
 jobs:
   sqa:
     runs-on: ubuntu-latest
+    env:
+      # Keeps unit tests and fuzzing from flooding forensics.log.
+      # run_forensics.py switches logging back on for its own run.
+      FORENSICS_DISABLED: "1"
 
     steps:
       - name: Check out repository
@@ -34,6 +38,16 @@ jobs:
 
       - name: Run fuzz.py
         run: python fuzz.py
+
+      - name: Run forensics
+        run: python run_forensics.py TEST_ARTIFACTS --max-files 10
+
+      - name: Show forensics log
+        if: always()
+        run: |
+          echo "---- forensics.log (first 80 lines) ----"
+          head -n 80 forensics.log || true
+          cat forensics_logs/summary.md >> "$GITHUB_STEP_SUMMARY" || true
 
       - name: Upload fuzzing and forensics reports
         if: always()

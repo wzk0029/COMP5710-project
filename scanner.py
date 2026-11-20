@@ -7,6 +7,7 @@ import parser
 import constants 
 import graphtaint 
 import os 
+import forensics
 import pandas as pd 
 import numpy as np
 import json
@@ -60,6 +61,7 @@ weird_yaml = []
 helm_chart = []
 k8s_yaml =[]
 
+@forensics.forensic
 def getYAMLFiles(path_to_dir):
     valid_  = [] 
     for root_, dirs, files_ in os.walk( path_to_dir ):
@@ -68,6 +70,7 @@ def getYAMLFiles(path_to_dir):
            if(os.path.exists(full_p_file)):
              if (full_p_file.endswith( constants.YML_EXTENSION  )  or full_p_file.endswith( constants.YAML_EXTENSION  )  ):
                valid_.append(full_p_file)
+    forensics.event("yaml_files_found=%d dir=%s" % (len(valid_), forensics.path(path_to_dir)))
     return valid_ 
 
 def isValidUserName(uName): 
@@ -103,6 +106,7 @@ def isValidKey(keyName):
         valid = False                      
     return valid    
 
+@forensics.forensic
 def checkIfValidSecret(single_config_val):
     flag2Ret = False 
     # print(type( single_config_val ), single_config_val  )
@@ -116,6 +120,7 @@ def checkIfValidSecret(single_config_val):
                 flag2Ret = True 
     else: 
         flag2Ret = False 
+    forensics.event("secret_candidate=%s value=%s" % (flag2Ret, forensics.safe(single_config_val)))
     return flag2Ret
 
 def scanUserName(k_ , val_lis ):
@@ -159,7 +164,7 @@ def scanKeys(k_, val_lis):
                 hard_coded_keys.append( val_ )
     return hard_coded_keys    
 
-
+@forensics.forensic
 def scanForSecrets(yaml_d): 
     key_lis, dic2ret_secret   = [], {} 
     parser.getKeyRecursively( yaml_d, key_lis )
@@ -179,6 +184,7 @@ def scanForSecrets(yaml_d):
         if( len(unameList) > 0  )  or ( len(passwList) > 0  ) or ( len(keyList) > 0  ) :
             dic2ret_secret[key_] =  ( unameList, passwList, keyList ) 
     # print(dic2ret_secret)
+    forensics.event("keys_inspected=%d keys_with_secrets=%d key_names=%s" % (len(key_lis), len(dic2ret_secret), sorted(str(k) for k in dic2ret_secret)[:10]))
     return dic2ret_secret
 
 
@@ -367,7 +373,7 @@ def scanForMissingSecurityContext(path_scrpt):
     # print(dic) 
     return dic 
 
-
+@forensics.forensic
 def scanForDefaultNamespace(path_scrpt):
     dic, lis   = {}, []
     if ( parser.checkIfValidK8SYaml( path_scrpt )  ): 
@@ -414,7 +420,8 @@ def scanForDefaultNamespace(path_scrpt):
 
 
                     dic[ cnt ] = lis
-    # print(dic) 
+    # print(dic)
+    forensics.event("default_namespace_findings=%d file=%s" % (len(dic), forensics.path(path_scrpt))) 
     return dic 
 
 
@@ -538,7 +545,7 @@ def scanForMissingNetworkPolicy(path_script ):
             dic[ cnt ] = lis
     # print(dic) 
     return dic  
-
+@forensics.forensic
 def scanForTruePID(path_script ):
     dic, lis   = {}, []
     if ( parser.checkIfValidK8SYaml( path_script )  ): 
@@ -568,7 +575,8 @@ def scanForTruePID(path_script ):
                     result.locations = [location]
                     run.results.append(result)
                 dic[ cnt ] = []
-                
+
+    forensics.event("hostPID_findings=%d file=%s" % (len(dic), forensics.path(path_script)))
     return dic  
 
 

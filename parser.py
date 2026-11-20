@@ -14,13 +14,14 @@ import pathlib as pl
 import re
 import subprocess
 import os
+import forensics
 
 #update basepath
 base_path = r" "
 
 key_jsonpath_mapping = {}
 
-    
+@forensics.forensic
 def checkIfWeirdYAML(yaml_script):
     '''
     to filter invalid YAMLs such as ./github/workflows/ 
@@ -28,6 +29,7 @@ def checkIfWeirdYAML(yaml_script):
     val = False
     if ( any(x_ in yaml_script for x_ in constants.WEIRD_PATHS  ) ):
         val = True 
+    forensics.event("weird_yaml=%s file=%s" % (val, forensics.path(yaml_script)))
     return val 
 
 
@@ -89,7 +91,7 @@ def getValuesRecursively(  dict_   ) :
     else: 
         yield dict_ 
 
-
+@forensics.forensic
 def checkIfValidK8SYaml(path2yaml):
     val2ret   = False 
     dict_as_list = loadMultiYAML( path2yaml )
@@ -105,6 +107,7 @@ def checkIfValidK8SYaml(path2yaml):
     else: 
         if ( constants.API_V_KEYNAME in temp_ ) and (constants.KIND_KEY_NAME in temp_):
             val2ret = True 
+    forensics.event("valid_k8s=%s keys_seen=%d file=%s" % (val2ret, len(temp_), forensics.path(path2yaml)))
     return val2ret
 
 
@@ -139,6 +142,7 @@ def readYAMLAsStr( path_script ):
     return yaml_as_str
 
 # This function checks whether our parser throws an exception for reading the YAML file. 
+@forensics.forensic
 def checkParseError( path_script ):
     flag = True
     with open(path_script, constants.FILE_READ_FLAG) as yml:
@@ -155,8 +159,10 @@ def checkParseError( path_script ):
         except UnicodeDecodeError as err_: 
             flag = False
             print( constants.YAML_SKIPPING_TEXT  )
+    forensics.event("parse_ok=%s file=%s" % (flag, forensics.path(path_script)))
     return flag
 
+@forensics.forensic
 def loadMultiYAML( script_ ):
     dicts2ret = []  
     with open(script_, constants.FILE_READ_FLAG  ) as yml_content :
@@ -196,6 +202,7 @@ def loadMultiYAML( script_ ):
             #     print(type(d))
                 
         #print(dicts2ret)
+    forensics.event("docs_loaded=%d file=%s" % (len(dicts2ret), forensics.path(script_)))
     return dicts2ret
 
 
@@ -361,7 +368,7 @@ def show_line_for_paths(  filepath, key): #key_jsonpath_mapping is a global dict
     return lines
 
 
-
+@forensics.forensic
 def getSingleDict4MultiDocs( lis_dic ):
     dict2ret = {} 
     key_lis  = []
@@ -409,7 +416,7 @@ def getSingleDict4MultiDocs( lis_dic ):
     # yaml = ruamel.yaml.YAML()
     # yaml.dump(dict2ret, sys.stdout)
     # print("-----")
-        
+    forensics.event("docs_merged=%d keys_merged=%d" % (counter, len(dict2ret)))
     return dict2ret
 
 

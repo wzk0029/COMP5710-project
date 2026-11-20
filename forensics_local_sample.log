@@ -1,0 +1,238 @@
+2026-11-19T19:51:45.839Z | INFO    | __main__.main | EVENT | RUN_START python=3.14.3 os=Windows dir=TEST_ARTIFACTS github_run_id=local github_sha=local
+2026-11-19T19:51:45.839Z | INFO    | scanner.getYAMLFiles | CALL | args=[str(len=14,id=1c1f9e05)]
+2026-11-19T19:51:45.840Z | INFO    | scanner.getYAMLFiles | EVENT | yaml_files_found=76 dir=TEST_ARTIFACTS
+2026-11-19T19:51:45.840Z | INFO    | scanner.getYAMLFiles | RETURN | result=list(len=76) elapsed_ms=0.66
+2026-11-19T19:51:45.840Z | INFO    | parser.checkIfWeirdYAML | CALL | args=[path:TEST_ARTIFACTS\ANOTHER.DOCKERSOCK.yaml]
+2026-11-19T19:51:45.840Z | INFO    | parser.checkIfWeirdYAML | EVENT | weird_yaml=False file=TEST_ARTIFACTS\ANOTHER.DOCKERSOCK.yaml
+2026-11-19T19:51:45.841Z | INFO    | parser.checkIfWeirdYAML | RETURN | result=False elapsed_ms=1.20
+2026-11-19T19:51:45.841Z | INFO    | parser.checkParseError | CALL | args=[path:TEST_ARTIFACTS\ANOTHER.DOCKERSOCK.yaml]
+2026-11-19T19:51:45.853Z | INFO    | parser.checkParseError | EVENT | parse_ok=True file=TEST_ARTIFACTS\ANOTHER.DOCKERSOCK.yaml
+2026-11-19T19:51:45.853Z | INFO    | parser.checkParseError | RETURN | result=True elapsed_ms=11.88
+2026-11-19T19:51:45.853Z | INFO    | parser.checkIfValidK8SYaml | CALL | args=[path:TEST_ARTIFACTS\ANOTHER.DOCKERSOCK.yaml]
+2026-11-19T19:51:45.853Z | INFO    | parser.loadMultiYAML | CALL | args=[path:TEST_ARTIFACTS\ANOTHER.DOCKERSOCK.yaml]
+2026-11-19T19:51:45.857Z | INFO    | parser.checkParseError | CALL | args=[path:TEST_ARTIFACTS\ANOTHER.DOCKERSOCK.yaml]
+2026-11-19T19:51:45.861Z | INFO    | parser.checkParseError | EVENT | parse_ok=True file=TEST_ARTIFACTS\ANOTHER.DOCKERSOCK.yaml
+2026-11-19T19:51:45.861Z | INFO    | parser.checkParseError | RETURN | result=True elapsed_ms=4.44
+2026-11-19T19:51:45.861Z | INFO    | parser.loadMultiYAML | EVENT | docs_loaded=1 file=TEST_ARTIFACTS\ANOTHER.DOCKERSOCK.yaml
+2026-11-19T19:51:45.862Z | INFO    | parser.loadMultiYAML | RETURN | result=list(len=1) elapsed_ms=8.33
+2026-11-19T19:51:45.862Z | INFO    | parser.getSingleDict4MultiDocs | CALL | args=[list(len=1)]
+2026-11-19T19:51:45.862Z | INFO    | parser.getSingleDict4MultiDocs | EVENT | docs_merged=1 keys_merged=4
+2026-11-19T19:51:45.862Z | INFO    | parser.getSingleDict4MultiDocs | RETURN | result=dict(len=4) elapsed_ms=0.04
+2026-11-19T19:51:45.862Z | INFO    | parser.checkIfValidK8SYaml | EVENT | valid_k8s=True keys_seen=44 file=TEST_ARTIFACTS\ANOTHER.DOCKERSOCK.yaml
+2026-11-19T19:51:45.862Z | INFO    | parser.checkIfValidK8SYaml | RETURN | result=True elapsed_ms=8.57
+2026-11-19T19:51:45.862Z | INFO    | parser.loadMultiYAML | CALL | args=[path:TEST_ARTIFACTS\ANOTHER.DOCKERSOCK.yaml]
+2026-11-19T19:51:45.866Z | INFO    | parser.checkParseError | CALL | args=[path:TEST_ARTIFACTS\ANOTHER.DOCKERSOCK.yaml]
+2026-11-19T19:51:45.869Z | INFO    | parser.checkParseError | EVENT | parse_ok=True file=TEST_ARTIFACTS\ANOTHER.DOCKERSOCK.yaml
+2026-11-19T19:51:45.869Z | INFO    | parser.checkParseError | RETURN | result=True elapsed_ms=3.47
+2026-11-19T19:51:45.869Z | INFO    | parser.loadMultiYAML | EVENT | docs_loaded=1 file=TEST_ARTIFACTS\ANOTHER.DOCKERSOCK.yaml
+2026-11-19T19:51:45.870Z | INFO    | parser.loadMultiYAML | RETURN | result=list(len=1) elapsed_ms=7.72
+2026-11-19T19:51:45.870Z | INFO    | parser.getSingleDict4MultiDocs | CALL | args=[list(len=1)]
+2026-11-19T19:51:45.870Z | INFO    | parser.getSingleDict4MultiDocs | EVENT | docs_merged=1 keys_merged=4
+2026-11-19T19:51:45.870Z | INFO    | parser.getSingleDict4MultiDocs | RETURN | result=dict(len=4) elapsed_ms=0.03
+2026-11-19T19:51:45.870Z | INFO    | scanner.scanForSecrets | CALL | args=[dict(len=4)]
+2026-11-19T19:51:45.870Z | INFO    | scanner.scanForSecrets | EVENT | keys_inspected=44 keys_with_secrets=0 key_names=[]
+2026-11-19T19:51:45.870Z | INFO    | scanner.scanForSecrets | RETURN | result=dict(len=0) elapsed_ms=0.89
+2026-11-19T19:51:45.871Z | INFO    | scanner.scanForTruePID | CALL | args=[path:TEST_ARTIFACTS\ANOTHER.DOCKERSOCK.yaml]
+2026-11-19T19:51:45.871Z | INFO    | parser.checkIfValidK8SYaml | CALL | args=[path:TEST_ARTIFACTS\ANOTHER.DOCKERSOCK.yaml]
+2026-11-19T19:51:45.871Z | INFO    | parser.loadMultiYAML | CALL | args=[path:TEST_ARTIFACTS\ANOTHER.DOCKERSOCK.yaml]
+2026-11-19T19:51:45.874Z | INFO    | parser.checkParseError | CALL | args=[path:TEST_ARTIFACTS\ANOTHER.DOCKERSOCK.yaml]
+2026-11-19T19:51:45.878Z | INFO    | parser.checkParseError | EVENT | parse_ok=True file=TEST_ARTIFACTS\ANOTHER.DOCKERSOCK.yaml
+2026-11-19T19:51:45.878Z | INFO    | parser.checkParseError | RETURN | result=True elapsed_ms=3.84
+2026-11-19T19:51:45.878Z | INFO    | parser.loadMultiYAML | EVENT | docs_loaded=1 file=TEST_ARTIFACTS\ANOTHER.DOCKERSOCK.yaml
+2026-11-19T19:51:45.878Z | INFO    | parser.loadMultiYAML | RETURN | result=list(len=1) elapsed_ms=7.51
+2026-11-19T19:51:45.878Z | INFO    | parser.getSingleDict4MultiDocs | CALL | args=[list(len=1)]
+2026-11-19T19:51:45.878Z | INFO    | parser.getSingleDict4MultiDocs | EVENT | docs_merged=1 keys_merged=4
+2026-11-19T19:51:45.878Z | INFO    | parser.getSingleDict4MultiDocs | RETURN | result=dict(len=4) elapsed_ms=0.03
+2026-11-19T19:51:45.878Z | INFO    | parser.checkIfValidK8SYaml | EVENT | valid_k8s=True keys_seen=44 file=TEST_ARTIFACTS\ANOTHER.DOCKERSOCK.yaml
+2026-11-19T19:51:45.878Z | INFO    | parser.checkIfValidK8SYaml | RETURN | result=True elapsed_ms=7.70
+2026-11-19T19:51:45.878Z | INFO    | parser.loadMultiYAML | CALL | args=[path:TEST_ARTIFACTS\ANOTHER.DOCKERSOCK.yaml]
+2026-11-19T19:51:45.882Z | INFO    | parser.checkParseError | CALL | args=[path:TEST_ARTIFACTS\ANOTHER.DOCKERSOCK.yaml]
+2026-11-19T19:51:45.885Z | INFO    | parser.checkParseError | EVENT | parse_ok=True file=TEST_ARTIFACTS\ANOTHER.DOCKERSOCK.yaml
+2026-11-19T19:51:45.885Z | INFO    | parser.checkParseError | RETURN | result=True elapsed_ms=3.40
+2026-11-19T19:51:45.885Z | INFO    | parser.loadMultiYAML | EVENT | docs_loaded=1 file=TEST_ARTIFACTS\ANOTHER.DOCKERSOCK.yaml
+2026-11-19T19:51:45.885Z | INFO    | parser.loadMultiYAML | RETURN | result=list(len=1) elapsed_ms=7.06
+2026-11-19T19:51:45.885Z | INFO    | parser.getSingleDict4MultiDocs | CALL | args=[list(len=1)]
+2026-11-19T19:51:45.885Z | INFO    | parser.getSingleDict4MultiDocs | EVENT | docs_merged=1 keys_merged=4
+2026-11-19T19:51:45.885Z | INFO    | parser.getSingleDict4MultiDocs | RETURN | result=dict(len=4) elapsed_ms=0.03
+2026-11-19T19:51:45.886Z | INFO    | scanner.scanForTruePID | EVENT | hostPID_findings=0 file=TEST_ARTIFACTS\ANOTHER.DOCKERSOCK.yaml
+2026-11-19T19:51:45.886Z | INFO    | scanner.scanForTruePID | RETURN | result=dict(len=0) elapsed_ms=15.00
+2026-11-19T19:51:45.886Z | INFO    | scanner.scanForDefaultNamespace | CALL | args=[path:TEST_ARTIFACTS\ANOTHER.DOCKERSOCK.yaml]
+2026-11-19T19:51:45.886Z | INFO    | parser.checkIfValidK8SYaml | CALL | args=[path:TEST_ARTIFACTS\ANOTHER.DOCKERSOCK.yaml]
+2026-11-19T19:51:45.886Z | INFO    | parser.loadMultiYAML | CALL | args=[path:TEST_ARTIFACTS\ANOTHER.DOCKERSOCK.yaml]
+2026-11-19T19:51:45.889Z | INFO    | parser.checkParseError | CALL | args=[path:TEST_ARTIFACTS\ANOTHER.DOCKERSOCK.yaml]
+2026-11-19T19:51:45.892Z | INFO    | parser.checkParseError | EVENT | parse_ok=True file=TEST_ARTIFACTS\ANOTHER.DOCKERSOCK.yaml
+2026-11-19T19:51:45.892Z | INFO    | parser.checkParseError | RETURN | result=True elapsed_ms=3.39
+2026-11-19T19:51:45.893Z | INFO    | parser.loadMultiYAML | EVENT | docs_loaded=1 file=TEST_ARTIFACTS\ANOTHER.DOCKERSOCK.yaml
+2026-11-19T19:51:45.893Z | INFO    | parser.loadMultiYAML | RETURN | result=list(len=1) elapsed_ms=6.98
+2026-11-19T19:51:45.893Z | INFO    | parser.getSingleDict4MultiDocs | CALL | args=[list(len=1)]
+2026-11-19T19:51:45.893Z | INFO    | parser.getSingleDict4MultiDocs | EVENT | docs_merged=1 keys_merged=4
+2026-11-19T19:51:45.893Z | INFO    | parser.getSingleDict4MultiDocs | RETURN | result=dict(len=4) elapsed_ms=0.11
+2026-11-19T19:51:45.893Z | INFO    | parser.checkIfValidK8SYaml | EVENT | valid_k8s=True keys_seen=44 file=TEST_ARTIFACTS\ANOTHER.DOCKERSOCK.yaml
+2026-11-19T19:51:45.893Z | INFO    | parser.checkIfValidK8SYaml | RETURN | result=True elapsed_ms=7.28
+2026-11-19T19:51:45.893Z | INFO    | parser.loadMultiYAML | CALL | args=[path:TEST_ARTIFACTS\ANOTHER.DOCKERSOCK.yaml]
+2026-11-19T19:51:45.896Z | INFO    | parser.checkParseError | CALL | args=[path:TEST_ARTIFACTS\ANOTHER.DOCKERSOCK.yaml]
+2026-11-19T19:51:45.899Z | INFO    | parser.checkParseError | EVENT | parse_ok=True file=TEST_ARTIFACTS\ANOTHER.DOCKERSOCK.yaml
+2026-11-19T19:51:45.899Z | INFO    | parser.checkParseError | RETURN | result=True elapsed_ms=3.14
+2026-11-19T19:51:45.900Z | INFO    | parser.loadMultiYAML | EVENT | docs_loaded=1 file=TEST_ARTIFACTS\ANOTHER.DOCKERSOCK.yaml
+2026-11-19T19:51:45.900Z | INFO    | parser.loadMultiYAML | RETURN | result=list(len=1) elapsed_ms=6.60
+2026-11-19T19:51:45.900Z | INFO    | parser.getSingleDict4MultiDocs | CALL | args=[list(len=1)]
+2026-11-19T19:51:45.900Z | INFO    | parser.getSingleDict4MultiDocs | EVENT | docs_merged=1 keys_merged=4
+2026-11-19T19:51:45.900Z | INFO    | parser.getSingleDict4MultiDocs | RETURN | result=dict(len=4) elapsed_ms=0.02
+2026-11-19T19:51:45.900Z | INFO    | scanner.scanForDefaultNamespace | EVENT | default_namespace_findings=0 file=TEST_ARTIFACTS\ANOTHER.DOCKERSOCK.yaml
+2026-11-19T19:51:45.900Z | INFO    | scanner.scanForDefaultNamespace | RETURN | result=dict(len=0) elapsed_ms=14.17
+2026-11-19T19:51:45.900Z | INFO    | parser.checkIfWeirdYAML | CALL | args=[path:TEST_ARTIFACTS\absent.default1.yaml]
+2026-11-19T19:51:45.900Z | INFO    | parser.checkIfWeirdYAML | EVENT | weird_yaml=False file=TEST_ARTIFACTS\absent.default1.yaml
+2026-11-19T19:51:45.900Z | INFO    | parser.checkIfWeirdYAML | RETURN | result=False elapsed_ms=0.02
+2026-11-19T19:51:45.900Z | INFO    | parser.checkParseError | CALL | args=[path:TEST_ARTIFACTS\absent.default1.yaml]
+2026-11-19T19:51:45.906Z | INFO    | parser.checkParseError | EVENT | parse_ok=True file=TEST_ARTIFACTS\absent.default1.yaml
+2026-11-19T19:51:45.906Z | INFO    | parser.checkParseError | RETURN | result=True elapsed_ms=6.21
+2026-11-19T19:51:45.906Z | INFO    | parser.checkIfValidK8SYaml | CALL | args=[path:TEST_ARTIFACTS\absent.default1.yaml]
+2026-11-19T19:51:45.906Z | INFO    | parser.loadMultiYAML | CALL | args=[path:TEST_ARTIFACTS\absent.default1.yaml]
+2026-11-19T19:51:45.907Z | INFO    | parser.checkParseError | CALL | args=[path:TEST_ARTIFACTS\absent.default1.yaml]
+2026-11-19T19:51:45.908Z | INFO    | parser.checkParseError | EVENT | parse_ok=True file=TEST_ARTIFACTS\absent.default1.yaml
+2026-11-19T19:51:45.908Z | INFO    | parser.checkParseError | RETURN | result=True elapsed_ms=0.67
+2026-11-19T19:51:45.908Z | INFO    | parser.loadMultiYAML | EVENT | docs_loaded=1 file=TEST_ARTIFACTS\absent.default1.yaml
+2026-11-19T19:51:45.908Z | INFO    | parser.loadMultiYAML | RETURN | result=list(len=1) elapsed_ms=1.54
+2026-11-19T19:51:45.908Z | INFO    | parser.getSingleDict4MultiDocs | CALL | args=[list(len=1)]
+2026-11-19T19:51:45.908Z | INFO    | parser.getSingleDict4MultiDocs | EVENT | docs_merged=1 keys_merged=3
+2026-11-19T19:51:45.908Z | INFO    | parser.getSingleDict4MultiDocs | RETURN | result=dict(len=3) elapsed_ms=0.02
+2026-11-19T19:51:45.908Z | INFO    | parser.checkIfValidK8SYaml | EVENT | valid_k8s=True keys_seen=5 file=TEST_ARTIFACTS\absent.default1.yaml
+2026-11-19T19:51:45.908Z | INFO    | parser.checkIfValidK8SYaml | RETURN | result=True elapsed_ms=1.67
+2026-11-19T19:51:45.908Z | INFO    | parser.loadMultiYAML | CALL | args=[path:TEST_ARTIFACTS\absent.default1.yaml]
+2026-11-19T19:51:45.908Z | INFO    | parser.checkParseError | CALL | args=[path:TEST_ARTIFACTS\absent.default1.yaml]
+2026-11-19T19:51:45.909Z | INFO    | parser.checkParseError | EVENT | parse_ok=True file=TEST_ARTIFACTS\absent.default1.yaml
+2026-11-19T19:51:45.909Z | INFO    | parser.checkParseError | RETURN | result=True elapsed_ms=0.72
+2026-11-19T19:51:45.909Z | INFO    | parser.loadMultiYAML | EVENT | docs_loaded=1 file=TEST_ARTIFACTS\absent.default1.yaml
+2026-11-19T19:51:45.909Z | INFO    | parser.loadMultiYAML | RETURN | result=list(len=1) elapsed_ms=1.44
+2026-11-19T19:51:45.909Z | INFO    | parser.getSingleDict4MultiDocs | CALL | args=[list(len=1)]
+2026-11-19T19:51:45.909Z | INFO    | parser.getSingleDict4MultiDocs | EVENT | docs_merged=1 keys_merged=3
+2026-11-19T19:51:45.909Z | INFO    | parser.getSingleDict4MultiDocs | RETURN | result=dict(len=3) elapsed_ms=0.02
+2026-11-19T19:51:45.909Z | INFO    | scanner.scanForSecrets | CALL | args=[dict(len=3)]
+2026-11-19T19:51:45.909Z | INFO    | scanner.scanForSecrets | EVENT | keys_inspected=5 keys_with_secrets=0 key_names=[]
+2026-11-19T19:51:45.909Z | INFO    | scanner.scanForSecrets | RETURN | result=dict(len=0) elapsed_ms=0.06
+2026-11-19T19:51:45.910Z | INFO    | scanner.scanForTruePID | CALL | args=[path:TEST_ARTIFACTS\absent.default1.yaml]
+2026-11-19T19:51:45.910Z | INFO    | parser.checkIfValidK8SYaml | CALL | args=[path:TEST_ARTIFACTS\absent.default1.yaml]
+2026-11-19T19:51:45.910Z | INFO    | parser.loadMultiYAML | CALL | args=[path:TEST_ARTIFACTS\absent.default1.yaml]
+2026-11-19T19:51:45.910Z | INFO    | parser.checkParseError | CALL | args=[path:TEST_ARTIFACTS\absent.default1.yaml]
+2026-11-19T19:51:45.911Z | INFO    | parser.checkParseError | EVENT | parse_ok=True file=TEST_ARTIFACTS\absent.default1.yaml
+2026-11-19T19:51:45.911Z | INFO    | parser.checkParseError | RETURN | result=True elapsed_ms=0.86
+2026-11-19T19:51:45.911Z | INFO    | parser.loadMultiYAML | EVENT | docs_loaded=1 file=TEST_ARTIFACTS\absent.default1.yaml
+2026-11-19T19:51:45.911Z | INFO    | parser.loadMultiYAML | RETURN | result=list(len=1) elapsed_ms=1.71
+2026-11-19T19:51:45.911Z | INFO    | parser.getSingleDict4MultiDocs | CALL | args=[list(len=1)]
+2026-11-19T19:51:45.911Z | INFO    | parser.getSingleDict4MultiDocs | EVENT | docs_merged=1 keys_merged=3
+2026-11-19T19:51:45.911Z | INFO    | parser.getSingleDict4MultiDocs | RETURN | result=dict(len=3) elapsed_ms=0.02
+2026-11-19T19:51:45.911Z | INFO    | parser.checkIfValidK8SYaml | EVENT | valid_k8s=True keys_seen=5 file=TEST_ARTIFACTS\absent.default1.yaml
+2026-11-19T19:51:45.911Z | INFO    | parser.checkIfValidK8SYaml | RETURN | result=True elapsed_ms=1.83
+2026-11-19T19:51:45.911Z | INFO    | parser.loadMultiYAML | CALL | args=[path:TEST_ARTIFACTS\absent.default1.yaml]
+2026-11-19T19:51:45.912Z | INFO    | parser.checkParseError | CALL | args=[path:TEST_ARTIFACTS\absent.default1.yaml]
+2026-11-19T19:51:45.913Z | INFO    | parser.checkParseError | EVENT | parse_ok=True file=TEST_ARTIFACTS\absent.default1.yaml
+2026-11-19T19:51:45.913Z | INFO    | parser.checkParseError | RETURN | result=True elapsed_ms=0.63
+2026-11-19T19:51:45.913Z | INFO    | parser.loadMultiYAML | EVENT | docs_loaded=1 file=TEST_ARTIFACTS\absent.default1.yaml
+2026-11-19T19:51:45.913Z | INFO    | parser.loadMultiYAML | RETURN | result=list(len=1) elapsed_ms=1.39
+2026-11-19T19:51:45.913Z | INFO    | parser.getSingleDict4MultiDocs | CALL | args=[list(len=1)]
+2026-11-19T19:51:45.913Z | INFO    | parser.getSingleDict4MultiDocs | EVENT | docs_merged=1 keys_merged=3
+2026-11-19T19:51:45.913Z | INFO    | parser.getSingleDict4MultiDocs | RETURN | result=dict(len=3) elapsed_ms=0.03
+2026-11-19T19:51:45.913Z | INFO    | scanner.scanForTruePID | EVENT | hostPID_findings=0 file=TEST_ARTIFACTS\absent.default1.yaml
+2026-11-19T19:51:45.913Z | INFO    | scanner.scanForTruePID | RETURN | result=dict(len=0) elapsed_ms=3.46
+2026-11-19T19:51:45.913Z | INFO    | scanner.scanForDefaultNamespace | CALL | args=[path:TEST_ARTIFACTS\absent.default1.yaml]
+2026-11-19T19:51:45.913Z | INFO    | parser.checkIfValidK8SYaml | CALL | args=[path:TEST_ARTIFACTS\absent.default1.yaml]
+2026-11-19T19:51:45.913Z | INFO    | parser.loadMultiYAML | CALL | args=[path:TEST_ARTIFACTS\absent.default1.yaml]
+2026-11-19T19:51:45.914Z | INFO    | parser.checkParseError | CALL | args=[path:TEST_ARTIFACTS\absent.default1.yaml]
+2026-11-19T19:51:45.914Z | INFO    | parser.checkParseError | EVENT | parse_ok=True file=TEST_ARTIFACTS\absent.default1.yaml
+2026-11-19T19:51:45.914Z | INFO    | parser.checkParseError | RETURN | result=True elapsed_ms=0.66
+2026-11-19T19:51:45.914Z | INFO    | parser.loadMultiYAML | EVENT | docs_loaded=1 file=TEST_ARTIFACTS\absent.default1.yaml
+2026-11-19T19:51:45.915Z | INFO    | parser.loadMultiYAML | RETURN | result=list(len=1) elapsed_ms=1.49
+2026-11-19T19:51:45.915Z | INFO    | parser.getSingleDict4MultiDocs | CALL | args=[list(len=1)]
+2026-11-19T19:51:45.915Z | INFO    | parser.getSingleDict4MultiDocs | EVENT | docs_merged=1 keys_merged=3
+2026-11-19T19:51:45.915Z | INFO    | parser.getSingleDict4MultiDocs | RETURN | result=dict(len=3) elapsed_ms=0.02
+2026-11-19T19:51:45.915Z | INFO    | parser.checkIfValidK8SYaml | EVENT | valid_k8s=True keys_seen=5 file=TEST_ARTIFACTS\absent.default1.yaml
+2026-11-19T19:51:45.915Z | INFO    | parser.checkIfValidK8SYaml | RETURN | result=True elapsed_ms=1.62
+2026-11-19T19:51:45.915Z | INFO    | parser.loadMultiYAML | CALL | args=[path:TEST_ARTIFACTS\absent.default1.yaml]
+2026-11-19T19:51:45.915Z | INFO    | parser.checkParseError | CALL | args=[path:TEST_ARTIFACTS\absent.default1.yaml]
+2026-11-19T19:51:45.916Z | INFO    | parser.checkParseError | EVENT | parse_ok=True file=TEST_ARTIFACTS\absent.default1.yaml
+2026-11-19T19:51:45.916Z | INFO    | parser.checkParseError | RETURN | result=True elapsed_ms=0.65
+2026-11-19T19:51:45.916Z | INFO    | parser.loadMultiYAML | EVENT | docs_loaded=1 file=TEST_ARTIFACTS\absent.default1.yaml
+2026-11-19T19:51:45.916Z | INFO    | parser.loadMultiYAML | RETURN | result=list(len=1) elapsed_ms=1.38
+2026-11-19T19:51:45.916Z | INFO    | parser.getSingleDict4MultiDocs | CALL | args=[list(len=1)]
+2026-11-19T19:51:45.916Z | INFO    | parser.getSingleDict4MultiDocs | EVENT | docs_merged=1 keys_merged=3
+2026-11-19T19:51:45.916Z | INFO    | parser.getSingleDict4MultiDocs | RETURN | result=dict(len=3) elapsed_ms=0.02
+2026-11-19T19:51:45.918Z | ERROR   | scanner.scanForDefaultNamespace | EXCEPTION | FileNotFoundError at subprocess.py:1552 msg=[WinError 2] The system cannot find the file specified elapsed_ms=5.38
+2026-11-19T19:51:45.919Z | INFO    | parser.checkIfWeirdYAML | CALL | args=[path:TEST_ARTIFACTS\absent.ingress.yaml]
+2026-11-19T19:51:45.919Z | INFO    | parser.checkIfWeirdYAML | EVENT | weird_yaml=False file=TEST_ARTIFACTS\absent.ingress.yaml
+2026-11-19T19:51:45.919Z | INFO    | parser.checkIfWeirdYAML | RETURN | result=False elapsed_ms=0.03
+2026-11-19T19:51:45.919Z | INFO    | parser.checkParseError | CALL | args=[path:TEST_ARTIFACTS\absent.ingress.yaml]
+2026-11-19T19:51:45.930Z | INFO    | parser.checkParseError | EVENT | parse_ok=True file=TEST_ARTIFACTS\absent.ingress.yaml
+2026-11-19T19:51:45.930Z | INFO    | parser.checkParseError | RETURN | result=True elapsed_ms=11.64
+2026-11-19T19:51:45.930Z | INFO    | parser.checkIfValidK8SYaml | CALL | args=[path:TEST_ARTIFACTS\absent.ingress.yaml]
+2026-11-19T19:51:45.930Z | INFO    | parser.loadMultiYAML | CALL | args=[path:TEST_ARTIFACTS\absent.ingress.yaml]
+2026-11-19T19:51:45.932Z | INFO    | parser.checkParseError | CALL | args=[path:TEST_ARTIFACTS\absent.ingress.yaml]
+2026-11-19T19:51:45.933Z | INFO    | parser.checkParseError | EVENT | parse_ok=True file=TEST_ARTIFACTS\absent.ingress.yaml
+2026-11-19T19:51:45.933Z | INFO    | parser.checkParseError | RETURN | result=True elapsed_ms=1.30
+2026-11-19T19:51:45.933Z | INFO    | parser.loadMultiYAML | EVENT | docs_loaded=1 file=TEST_ARTIFACTS\absent.ingress.yaml
+2026-11-19T19:51:45.933Z | INFO    | parser.loadMultiYAML | RETURN | result=list(len=1) elapsed_ms=2.96
+2026-11-19T19:51:45.933Z | INFO    | parser.getSingleDict4MultiDocs | CALL | args=[list(len=1)]
+2026-11-19T19:51:45.933Z | INFO    | parser.getSingleDict4MultiDocs | EVENT | docs_merged=1 keys_merged=3
+2026-11-19T19:51:45.933Z | INFO    | parser.getSingleDict4MultiDocs | RETURN | result=dict(len=3) elapsed_ms=0.03
+2026-11-19T19:51:45.934Z | INFO    | parser.checkIfValidK8SYaml | EVENT | valid_k8s=False keys_seen=12 file=TEST_ARTIFACTS\absent.ingress.yaml
+2026-11-19T19:51:45.934Z | INFO    | parser.checkIfValidK8SYaml | RETURN | result=False elapsed_ms=3.11
+2026-11-19T19:51:45.934Z | INFO    | parser.loadMultiYAML | CALL | args=[path:TEST_ARTIFACTS\absent.ingress.yaml]
+2026-11-19T19:51:45.935Z | INFO    | parser.checkParseError | CALL | args=[path:TEST_ARTIFACTS\absent.ingress.yaml]
+2026-11-19T19:51:45.936Z | INFO    | parser.checkParseError | EVENT | parse_ok=True file=TEST_ARTIFACTS\absent.ingress.yaml
+2026-11-19T19:51:45.936Z | INFO    | parser.checkParseError | RETURN | result=True elapsed_ms=1.20
+2026-11-19T19:51:45.936Z | INFO    | parser.loadMultiYAML | EVENT | docs_loaded=1 file=TEST_ARTIFACTS\absent.ingress.yaml
+2026-11-19T19:51:45.936Z | INFO    | parser.loadMultiYAML | RETURN | result=list(len=1) elapsed_ms=2.60
+2026-11-19T19:51:45.936Z | INFO    | parser.getSingleDict4MultiDocs | CALL | args=[list(len=1)]
+2026-11-19T19:51:45.936Z | INFO    | parser.getSingleDict4MultiDocs | EVENT | docs_merged=1 keys_merged=3
+2026-11-19T19:51:45.936Z | INFO    | parser.getSingleDict4MultiDocs | RETURN | result=dict(len=3) elapsed_ms=0.02
+2026-11-19T19:51:45.936Z | INFO    | scanner.scanForSecrets | CALL | args=[dict(len=3)]
+2026-11-19T19:51:45.936Z | INFO    | scanner.scanForSecrets | EVENT | keys_inspected=12 keys_with_secrets=0 key_names=[]
+2026-11-19T19:51:45.936Z | INFO    | scanner.scanForSecrets | RETURN | result=dict(len=0) elapsed_ms=0.14
+2026-11-19T19:51:45.936Z | INFO    | scanner.scanForTruePID | CALL | args=[path:TEST_ARTIFACTS\absent.ingress.yaml]
+2026-11-19T19:51:45.936Z | INFO    | parser.checkIfValidK8SYaml | CALL | args=[path:TEST_ARTIFACTS\absent.ingress.yaml]
+2026-11-19T19:51:45.937Z | INFO    | parser.loadMultiYAML | CALL | args=[path:TEST_ARTIFACTS\absent.ingress.yaml]
+2026-11-19T19:51:45.938Z | INFO    | parser.checkParseError | CALL | args=[path:TEST_ARTIFACTS\absent.ingress.yaml]
+2026-11-19T19:51:45.939Z | INFO    | parser.checkParseError | EVENT | parse_ok=True file=TEST_ARTIFACTS\absent.ingress.yaml
+2026-11-19T19:51:45.939Z | INFO    | parser.checkParseError | RETURN | result=True elapsed_ms=1.11
+2026-11-19T19:51:45.939Z | INFO    | parser.loadMultiYAML | EVENT | docs_loaded=1 file=TEST_ARTIFACTS\absent.ingress.yaml
+2026-11-19T19:51:45.939Z | INFO    | parser.loadMultiYAML | RETURN | result=list(len=1) elapsed_ms=2.38
+2026-11-19T19:51:45.939Z | INFO    | parser.getSingleDict4MultiDocs | CALL | args=[list(len=1)]
+2026-11-19T19:51:45.939Z | INFO    | parser.getSingleDict4MultiDocs | EVENT | docs_merged=1 keys_merged=3
+2026-11-19T19:51:45.939Z | INFO    | parser.getSingleDict4MultiDocs | RETURN | result=dict(len=3) elapsed_ms=0.02
+2026-11-19T19:51:45.939Z | INFO    | parser.checkIfValidK8SYaml | EVENT | valid_k8s=False keys_seen=12 file=TEST_ARTIFACTS\absent.ingress.yaml
+2026-11-19T19:51:45.939Z | INFO    | parser.checkIfValidK8SYaml | RETURN | result=False elapsed_ms=2.52
+2026-11-19T19:51:45.939Z | INFO    | scanner.scanForTruePID | EVENT | hostPID_findings=0 file=TEST_ARTIFACTS\absent.ingress.yaml
+2026-11-19T19:51:45.939Z | INFO    | scanner.scanForTruePID | RETURN | result=dict(len=0) elapsed_ms=2.62
+2026-11-19T19:51:45.939Z | INFO    | scanner.scanForDefaultNamespace | CALL | args=[path:TEST_ARTIFACTS\absent.ingress.yaml]
+2026-11-19T19:51:45.939Z | INFO    | parser.checkIfValidK8SYaml | CALL | args=[path:TEST_ARTIFACTS\absent.ingress.yaml]
+2026-11-19T19:51:45.939Z | INFO    | parser.loadMultiYAML | CALL | args=[path:TEST_ARTIFACTS\absent.ingress.yaml]
+2026-11-19T19:51:45.940Z | INFO    | parser.checkParseError | CALL | args=[path:TEST_ARTIFACTS\absent.ingress.yaml]
+2026-11-19T19:51:45.942Z | INFO    | parser.checkParseError | EVENT | parse_ok=True file=TEST_ARTIFACTS\absent.ingress.yaml
+2026-11-19T19:51:45.942Z | INFO    | parser.checkParseError | RETURN | result=True elapsed_ms=1.12
+2026-11-19T19:51:45.942Z | INFO    | parser.loadMultiYAML | EVENT | docs_loaded=1 file=TEST_ARTIFACTS\absent.ingress.yaml
+2026-11-19T19:51:45.942Z | INFO    | parser.loadMultiYAML | RETURN | result=list(len=1) elapsed_ms=2.46
+2026-11-19T19:51:45.942Z | INFO    | parser.getSingleDict4MultiDocs | CALL | args=[list(len=1)]
+2026-11-19T19:51:45.942Z | INFO    | parser.getSingleDict4MultiDocs | EVENT | docs_merged=1 keys_merged=3
+2026-11-19T19:51:45.942Z | INFO    | parser.getSingleDict4MultiDocs | RETURN | result=dict(len=3) elapsed_ms=0.02
+2026-11-19T19:51:45.942Z | INFO    | parser.checkIfValidK8SYaml | EVENT | valid_k8s=False keys_seen=12 file=TEST_ARTIFACTS\absent.ingress.yaml
+2026-11-19T19:51:45.942Z | INFO    | parser.checkIfValidK8SYaml | RETURN | result=False elapsed_ms=2.60
+2026-11-19T19:51:45.942Z | INFO    | scanner.scanForDefaultNamespace | EVENT | default_namespace_findings=0 file=TEST_ARTIFACTS\absent.ingress.yaml
+2026-11-19T19:51:45.942Z | INFO    | scanner.scanForDefaultNamespace | RETURN | result=dict(len=0) elapsed_ms=2.65
+2026-11-19T19:51:45.942Z | INFO    | scanner.checkIfValidSecret | CALL | args=[str(len=0,id=44755836)]
+2026-11-19T19:51:45.942Z | INFO    | scanner.checkIfValidSecret | EVENT | secret_candidate=False value=str(len=0,id=44755836)
+2026-11-19T19:51:45.942Z | INFO    | scanner.checkIfValidSecret | RETURN | result=False elapsed_ms=0.03
+2026-11-19T19:51:45.942Z | INFO    | scanner.checkIfValidSecret | CALL | args=[str(len=1,id=753054d9)]
+2026-11-19T19:51:45.942Z | INFO    | scanner.checkIfValidSecret | EVENT | secret_candidate=False value=str(len=1,id=753054d9)
+2026-11-19T19:51:45.942Z | INFO    | scanner.checkIfValidSecret | RETURN | result=False elapsed_ms=0.02
+2026-11-19T19:51:45.942Z | INFO    | scanner.checkIfValidSecret | CALL | args=[str(len=14,id=ed1dbe66)]
+2026-11-19T19:51:45.942Z | INFO    | scanner.checkIfValidSecret | EVENT | secret_candidate=True value=str(len=14,id=ed1dbe66)
+2026-11-19T19:51:45.942Z | INFO    | scanner.checkIfValidSecret | RETURN | result=True elapsed_ms=0.02
+2026-11-19T19:51:45.942Z | INFO    | scanner.checkIfValidSecret | CALL | args=[str(len=15,id=c8140e7a)]
+2026-11-19T19:51:45.942Z | INFO    | scanner.checkIfValidSecret | EVENT | secret_candidate=True value=str(len=15,id=f6454677)
+2026-11-19T19:51:45.942Z | INFO    | scanner.checkIfValidSecret | RETURN | result=True elapsed_ms=0.02
+2026-11-19T19:51:45.942Z | INFO    | scanner.checkIfValidSecret | CALL | args=[None]
+2026-11-19T19:51:45.942Z | INFO    | scanner.checkIfValidSecret | EVENT | secret_candidate=False value=None
+2026-11-19T19:51:45.942Z | INFO    | scanner.checkIfValidSecret | RETURN | result=False elapsed_ms=0.02
+2026-11-19T19:51:45.942Z | INFO    | scanner.checkIfValidSecret | CALL | args=[42]
+2026-11-19T19:51:45.942Z | INFO    | scanner.checkIfValidSecret | EVENT | secret_candidate=False value=42
+2026-11-19T19:51:45.942Z | INFO    | scanner.checkIfValidSecret | RETURN | result=False elapsed_ms=0.01
+2026-11-19T19:51:45.942Z | INFO    | __main__.main | EVENT | RUN_END files=3

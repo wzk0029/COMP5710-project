@@ -15,23 +15,23 @@
 
 Total bugs: 6
 
-### parser.keyMiner: RecursionError at parser.py:44
+### parser.keyMiner: RecursionError at parser.py:46
 - Message: maximum recursion depth exceeded
 - Example input: `({'spec': {'spec': {'spec': {'spec': {'spec': {'spec': {'spec': {'spec': {'spec': {'spec': {'spec': {'spec': {'spec': {'spec': {'spec': {'spec': {'spe`
 
-### parser.getValuesRecursively: RecursionError at parser.py:83
+### parser.getValuesRecursively: RecursionError at parser.py:85
 - Message: maximum recursion depth exceeded
 - Example input: `({'spec': {'spec': {'spec': {'spec': {'spec': {'spec': {'spec': {'spec': {'spec': {'spec': {'spec': {'spec': {'spec': {'spec': {'spec': {'spec': {'spe`
 
-### parser.getSingleDict4MultiDocs: IndexError at parser.py:379
+### parser.getSingleDict4MultiDocs: IndexError at parser.py:386
 - Message: list index out of range
 - Example input: `([[], []],)`
 
-### parser.getSingleDict4MultiDocs: TypeError at parser.py:402
+### parser.getSingleDict4MultiDocs: TypeError at parser.py:409
 - Message: unsupported operand type(s) for +: 'NoneType' and 'str'
 - Example input: `([{None: [[], {'user': {1.5: 'AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA`
 
-### parser.find_json_path_keys: TypeError at parser.py:255
+### parser.find_json_path_keys: TypeError at parser.py:262
 - Message: expected string or bytes-like object, got 'NoneType'
 - Example input: `([[], {'password': [{}, [[True, 0, '', True], [], 1.5, ['AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA`
 
