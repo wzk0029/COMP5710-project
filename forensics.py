@@ -28,7 +28,7 @@ import sys
 import time
 
 DEFAULT_LOG = "forensics.log"
-_MAX_TEXT = 120
+_MAX_TEXT = 200
 _SALT = os.urandom(16)
 _logger = None
 
